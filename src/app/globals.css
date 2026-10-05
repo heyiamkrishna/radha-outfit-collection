@@ -63,3 +63,136 @@ body {
     }
   }
 }
+
+@import "tailwindcss";
+
+:root {
+  --background: #f8f8f6;
+  --foreground: #111111;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+
+  /* Soft blurred grid */
+  background-image:
+    radial-gradient(
+      circle at 20% 35%,
+      rgba(0, 0, 0, 0.055) 0,
+      rgba(0, 0, 0, 0.025) 90px,
+      transparent 180px
+    ),
+    radial-gradient(
+      circle at 75% 65%,
+      rgba(0, 0, 0, 0.045) 0,
+      rgba(0, 0, 0, 0.018) 100px,
+      transparent 200px
+    ),
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(255, 255, 255, 0.9) 0,
+      transparent 180px
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.22) 1.2px,
+      transparent 1.5px
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    47px 47px,
+    47px 47px,
+    47px 47px;
+
+  background-position:
+    center,
+    center,
+    center,
+    center,
+    center,
+    center;
+
+  background-attachment: fixed;
+}
+
+body {
+  position: relative;
+  background: #f8f8f6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.20) 1.2px,
+      transparent 1.5px
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.07) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    47px 47px,
+    47px 47px,
+    47px 47px;
+
+  background-position:
+    center,
+    center,
+    center;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 25% 35%,
+      rgba(0, 0, 0, 0.055),
+      transparent 220px
+    ),
+    radial-gradient(
+      circle at 75% 60%,
+      rgba(0, 0, 0, 0.045),
+      transparent 240px
+    );
+
+  filter: blur(25px);
+}

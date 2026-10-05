@@ -22,8 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${syne.variable} ${spaceGrotesk.variable}`}>
-      <body className="min-h-screen flex flex-col font-[family-name:var(--font-space-grotesk)] bg-[var(--background)] text-[var(--foreground)] antialiased">
+     <body className="min-h-screen flex flex-col font-[family-name:var(--font-space-grotesk)] text-[var(--foreground)] antialiased">
         {children}
+       
         <CartDrawer />
       </body>
     </html>

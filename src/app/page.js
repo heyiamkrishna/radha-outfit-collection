@@ -7,6 +7,7 @@ import ProductSection from '@/components/home/ProductSection'
 
 import { createClient } from '@/lib/supabase/server'
 
+
 /*
 |--------------------------------------------------------------------------
 | Homepage
@@ -251,11 +252,12 @@ export default async function HomePage() {
   } = await getHomeData()
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-neutral-950">
+    <div className="min-h-screen overflow-x-hidden bg-transparent  text-neutral-950">
 
       {/* =========================================================
           NAVBAR
       ========================================================== */}
+
 
       <Navbar />
 
